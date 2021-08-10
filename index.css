@@ -1,0 +1,9 @@
+@import url(https://lsong.org/stylesheets/grid.css);
+@import url(https://lsong.org/stylesheets/form.css);
+@import url(https://lsong.org/stylesheets/button.css);
+
+img {
+    width: 200px;
+    height: 200px;
+}
+

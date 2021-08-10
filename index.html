@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Liu Song’s WiFi</title>
+  <meta name="viewport" content="width=device-width">
+  <link type="text/css" charset="utf-8" rel="stylesheet" href="//lsong.org/css/stylesheet.css">
+  <link type="text/css" charset="utf-8" rel="stylesheet" href="//lsong.org/css/main.css">
+  <link rel="stylesheet" href="index.css">
+  <script type="module" src="index.js"></script>
+</head>
+
+<body class="container">
+  <header class="header">
+    <a class="heading" href="/" >
+      <img src="https://lsong.org/icon.svg" alt="" class="logo">
+      <h1><b>Liu Song’s</b> WiFi</h1>
+    </a>
+    <nav class="nav nav-bar">
+      <a href="//lsong.org">home</a>
+      <a href="//lsong.org/posts">blog</a>
+      <a href="//lsong.org/book">book</a>
+      <a href="//lsong.org/music">music</a>
+      <a href="//lsong.org/apps.html">apps</a>
+      <x-inbox></x-inbox>
+    </nav>
+    <hr />
+  </header>
+  <main class="content">
+
+    <section id="hello">
+      <h2>Hello 👋</h2>
+      <p class="headline">
+        Hi, I'm Liu Song, a full-stack developer with a passion for open-source software.
+        I have experience in web and mobile development, as well as a background in embedded systems and network
+        protocols.
+        I enjoy writing tech <a href="//lsong.org/posts">blogs</a> and developing <a
+          href="//lsong.org/apps.html">applications</a> in my spare time.
+        Proficient in Node.js, Golang, and server operations, I'm always eager to learn more and contribute to the
+        community.
+        Check out my GitHub <a href="https://github.com/song940">@song940</a> for some of my projects and feel free to connect
+        with me to discuss ideas.
+        When I'm not coding, I enjoy listening to <a href="//lsong.org/music">music</a> and playing <a
+          href="//lsong.org/game">games</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Create WiFi Sign</h2>
+      <p>Print a simple card with your WiFi login details. Tape it to the fridge, keep it in your wallet, etc.</p>
+      <div class="grid">
+        <div class="col-6">
+          <form id="form" class="form" >
+            <div class="form-field">
+              <label for="">SSID</label>
+              <input name="ssid" type="text" placeholder="WiFi Name">
+            </div>
+            <div class="form-field">
+              <label for="">Password</label>
+              <input name="password" type="text" placeholder="WiFi Password">
+            </div>
+
+            <div class="form-field">
+              <label for="">Encryption</label>
+              <label for="encryption-none"><input type="radio" name="encryption" value="">None</label>
+              <label for="encryption-wpa"><input type="radio" name="encryption" value="WPA"
+                  checked>WPA/WPA2/WPA3</label>
+              <label for="encryption-wep"><input type="radio" name="encryption" value="WEP">WEP</label>
+            </div>
+            <div class="form-field">
+              <label for="hiddenSSID"><input type="checkbox" id="hiddenSSID" name="hiddenSSID">Hidden</label>
+            </div>
+            <div class="form-field">
+              <button type="submit" >Genarate</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-6 preview">
+          <img id="qrcode" src="https://api.lsong.one:8443/qr?text=hi" alt="">
+        </div>
+      </div>
+    </section>
+
+    <hr />
+    <section class="subscribe">
+      <p>Join our occasional newsletter for product launches, availability, job openings, and news:</p>
+      <form action="https://formspree.io/song940@gmail.com" method="post">
+        <input class="input" type="email" id="email" name="email" required placeholder="email address">
+        <button class="button" type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <hr />
+    Liu Song
+    <address>
+      <a href="mailto:hi@lsong.org">hi@lsong.org</a>
+    </address>
+    <a href="https://lsong.org">https://lsong.org</a>
+  </footer>
+</body>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-42621148-4', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</html>
