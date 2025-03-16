@@ -24,7 +24,7 @@ ready(() => {
     const sign = `WIFI:T:${wifi.encryption};S:${ssid};P:${password};H:${wifi.hiddenSSID??''};;`;
     // WIFI:T:WPA;S:mobile@lsong.org;P:song940@163.com;H:;;
     console.log(wifi, sign);
-    qrcode.src = 'https://api.lsong.one:8443/qr?text=' + sign;
+    qrcode.src = 'https://m.maoyan.com/qr?text=' + sign;
 
   });
 });
